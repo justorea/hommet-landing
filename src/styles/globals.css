@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap");
+
+:root {
+  --black: #0a0a0a;
+  --ink: #1a1a1a;
+  --cream: #f4f0eb;
+  --warm: #eae5dc;
+  --muted: #8a857e;
+  --border: #d6d1c8;
+  --blue: #1200ff;
+  --blue-dk: #0e00cc;
+  --white: #ffffff;
+}
+
+.lp-root {
+  font-family: "Syne", sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+.lp-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.lp-reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.lp-section {
+  padding: 7rem 4rem;
+}
+
+.lp-label {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.lp-label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--blue);
+}
+
+.lp-section-title {
+  font-family: "Cormorant", serif;
+  font-weight: 300;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  max-width: 640px;
+}
+.lp-section-title em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.lp-btn-primary {
+  font-family: "Syne", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--white);
+  padding: 0.85rem 2rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  display: inline-block;
+}
+.lp-btn-primary:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.lp-btn-ghost {
+  font-family: "Syne", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+.lp-btn-ghost:hover {
+  color: var(--white);
+}
+.lp-btn-ghost::after {
+  content: "→";
+}
+
+.lp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}

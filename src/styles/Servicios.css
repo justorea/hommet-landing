@@ -1,0 +1,133 @@
+.lp-servicios {
+  background: var(--cream);
+}
+
+.lp-servicios .lp-label {
+  gap: 1rem;
+  letter-spacing: 0.2em;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.lp-servicios .lp-label::before {
+  width: 36px;
+  height: 2px;
+}
+
+.lp-servicios .lp-section-title {
+  margin-left: 11rem;
+}
+
+.lp-servicios__header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 7rem;
+}
+
+.lp-servicios__desc {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 340px;
+  text-align: left;
+}
+
+.lp-servicios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+}
+
+.lp-servicio-card {
+  background: var(--cream);
+  padding: 3rem 2.5rem;
+  cursor: pointer;
+  transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.lp-servicio-card:hover {
+  background: var(--black);
+}
+.lp-servicio-card:hover .lp-servicio-card__num,
+.lp-servicio-card:hover .lp-servicio-card__title,
+.lp-servicio-card:hover .lp-servicio-card__text {
+  color: var(--white);
+}
+.lp-servicio-card:hover .lp-servicio-card__link {
+  color: var(--blue);
+}
+.lp-servicio-card:hover .lp-servicio-card__img {
+  opacity: 0.18;
+}
+
+.lp-servicio-card__img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lp-servicio-card__num {
+  font-family: "Cormorant", serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.lp-servicio-card__title {
+  font-family: "Cormorant", serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 1.2rem;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.lp-servicio-card__text {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.lp-servicio-card__link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  transition: color 0.25s;
+}
+.lp-servicio-card__link::after {
+  content: "→";
+  transition: transform 0.2s;
+}
+.lp-servicio-card:hover .lp-servicio-card__link::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .lp-servicios__grid {
+    grid-template-columns: 1fr;
+  }
+}

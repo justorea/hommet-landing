@@ -1,0 +1,76 @@
+.lp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  background: rgba(244, 240, 235, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: padding 0.3s;
+}
+
+.lp-nav__logo {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  text-decoration: none;
+}
+.lp-nav__logo span {
+  color: var(--blue);
+}
+
+.lp-nav__links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.lp-nav__links a {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+.lp-nav__links a:hover {
+  opacity: 1;
+}
+
+.lp-nav__cta {
+  font-family: "Syne", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  border: none;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.lp-nav__cta:hover {
+  background: var(--blue);
+}
+
+@media (max-width: 900px) {
+  .lp-nav {
+    padding: 1.2rem 1.5rem;
+  }
+  .lp-nav__links {
+    display: none;
+  }
+}

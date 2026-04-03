@@ -1,0 +1,131 @@
+.lp-contacto {
+  background: var(--black);
+  padding: 4rem;
+}
+
+.lp-contacto__top {
+  margin-bottom: 0;
+}
+
+.lp-contacto .lp-label {
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+.lp-contacto .lp-label::before {
+  background: var(--blue);
+  width: 36px;
+  height: 2px;
+}
+
+.lp-contacto__body {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.lp-contacto__title {
+  font-family: "Cormorant", serif;
+  font-weight: 300;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.lp-contacto__title em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.lp-contacto__sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.75;
+  max-width: 420px;
+  margin: 0 auto 3.5rem;
+}
+
+.lp-contacto__form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lp-contacto__input {
+  flex: 1;
+  font-family: "Syne", sans-serif;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: none;
+  color: var(--white);
+  padding: 1rem 1.25rem;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.lp-contacto__input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+.lp-contacto__input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lp-contacto__submit {
+  font-family: "Syne", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 1rem 1.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.lp-contacto__submit:hover {
+  background: var(--blue-dk);
+}
+
+.lp-contacto__alts {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.lp-contacto__alt {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+.lp-contacto__alt:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 900px) {
+  .lp-contacto {
+    padding: 3rem 1.5rem;
+  }
+  .lp-contacto__form {
+    flex-direction: column;
+  }
+  .lp-contacto__input {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: none;
+  }
+}
